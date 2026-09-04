@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>VV STYLIST — Vancouver Barber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--fg:#f4f4f0;--muted:#9b9b96;--line:rgba(255,255,255,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-20%;pointer-events:none;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.065),transparent 28%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.04),transparent 24%);filter:blur(35px);z-index:-1}
+a{color:inherit;text-decoration:none}.site{min-height:100vh;padding:18px}
+.shell{position:relative;min-height:calc(100vh - 36px);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#070707;box-shadow:0 0 80px rgba(255,255,255,.055),0 35px 120px rgba(0,0,0,.9)}
+nav{position:absolute;z-index:10;left:0;right:0;top:0;height:90px;display:flex;align-items:center;justify-content:space-between;padding:0 34px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(#050505aa,transparent)}
+.logo{font-weight:800;letter-spacing:-.08em;line-height:.72;font-size:30px}.logo span{display:block;font-size:11px;letter-spacing:.28em;margin-left:2px;margin-top:7px;font-weight:600}
+.links{display:flex;gap:30px;font:11px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}.links a{opacity:.75;transition:.25s}.links a:hover{opacity:1}
+.navright{display:flex;align-items:center;gap:14px}.social{display:flex;gap:14px;font:11px "DM Mono",monospace}.social a{opacity:.8}.book{padding:13px 19px;border:1px solid #444;border-radius:4px;background:#121212;font:11px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;transition:.25s}.book:hover{background:#fff;color:#000}
+.hero{position:relative;min-height:calc(100vh - 36px);display:grid;place-items:center;padding:110px 4vw 80px}
+.collage{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;opacity:.55;filter:grayscale(.72) contrast(1.15)}
+.collage img{width:100%;height:100%;object-fit:cover;min-width:0;mix-blend-mode:screen}.collage:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#030303 0%,transparent 22%,transparent 78%,#030303 100%),linear-gradient(0deg,#050505 0%,transparent 25%,#030303d9 100%),radial-gradient(circle,#0000 15%,#000b 90%);z-index:1}
+.heroContent{position:relative;z-index:3;text-align:center;max-width:900px}.eyebrow{font:10px "DM Mono",monospace;letter-spacing:.34em;color:#bbb;margin-bottom:25px}
+.mark{font-size:clamp(92px,17vw,225px);line-height:.62;letter-spacing:-.12em;font-weight:800;text-shadow:0 0 35px #000,0 0 90px #000}.mark small{display:block;font-size:clamp(19px,3vw,40px);letter-spacing:.33em;line-height:1.2;margin-left:.25em;margin-top:18px}
+.tagline{margin:35px auto 27px;font:11px "DM Mono",monospace;letter-spacing:.28em;line-height:2;color:#ddd}.cta{display:inline-flex;align-items:center;gap:28px;padding:16px 23px;border:1px solid #5b5b5b;background:#0b0b0be8;font:11px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;transition:.25s}.cta:hover{background:#fff;color:#000;transform:translateY(-2px)}
+.music{position:absolute;z-index:5;left:30px;bottom:30px;width:300px;border:1px solid var(--line);border-radius:8px;background:#070707d9;backdrop-filter:blur(16px);padding:14px;box-shadow:0 15px 45px #000}
+.track{display:flex;align-items:center;gap:12px}.cover{width:54px;height:54px;object-fit:cover;border-radius:4px;filter:grayscale(1)}.tracktitle{font:10px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.sub{font-size:9px;color:#777;margin-top:6px}.wave{height:24px;margin-top:10px;opacity:.55;background:repeating-linear-gradient(90deg,#aaa 0 2px,transparent 2px 5px);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.location{position:absolute;z-index:5;right:32px;bottom:31px;font:10px "DM Mono",monospace;letter-spacing:.13em;text-align:right;color:#bbb}.scroll{position:absolute;z-index:5;bottom:26px;left:50%;transform:translateX(-50%);font:9px "DM Mono",monospace;letter-spacing:.25em;color:#aaa;text-align:center}.scroll b{display:block;font-size:18px;font-weight:400;margin-top:7px}
+.section{padding:110px 7vw;border-top:1px solid var(--line);background:#070707}.section h2{font-size:clamp(45px,8vw,100px);letter-spacing:-.07em;margin:0 0 22px}.section p{max-width:600px;color:#999;line-height:1.8}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:55px}.card{position:relative;aspect-ratio:4/5;overflow:hidden;background:#111}.card img,.card video{width:100%;height:100%;object-fit:cover;filter:grayscale(.55);transition:.6s}.card:hover img,.card:hover video{transform:scale(1.045);filter:grayscale(0)}.label{position:absolute;left:14px;bottom:14px;font:10px "DM Mono",monospace;letter-spacing:.12em;background:#050505d9;padding:8px 10px}
+footer{padding:50px 7vw 65px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:30px;font:10px "DM Mono",monospace;color:#888;letter-spacing:.12em}
+.footerSocial{min-width:145px;padding:14px 18px;border:1px solid #444;border-radius:4px;background:#0d0d0d;color:#ddd;text-align:center;text-transform:uppercase;transition:.25s}
+.footerSocial:hover{background:#fff;color:#000}
+.footerCenter{text-align:center;display:flex;flex-direction:column;gap:9px;align-items:center}
+.footerCenter a{color:#aaa}
+.footerCenter small{font:9px "DM Mono",monospace;color:#666;letter-spacing:.08em;margin-top:5px}
+
+@media(max-width:800px){
+.site{padding:8px}.shell{min-height:calc(100vh - 16px);border-radius:15px}
+nav{height:72px;padding:0 20px}.logo{font-size:24px}.links{display:none}.navright{gap:8px}.social{display:flex;gap:10px}.social a{font-size:10px}.book{padding:11px 13px}
+.hero{min-height:calc(100svh - 16px);padding:95px 18px 145px;align-items:center}
+.collage{grid-template-columns:1.15fr .85fr;opacity:.5}.collage img:nth-child(n+3){display:none}
+.collage:after{background:linear-gradient(90deg,#030303 0%,transparent 18%,transparent 82%,#030303 100%),linear-gradient(0deg,#050505 0%,transparent 30%,#030303e8 100%),radial-gradient(circle,#0000 10%,#000c 90%)}
+.heroContent{width:100%;max-width:680px}.eyebrow{font-size:9px;letter-spacing:.26em;margin-bottom:22px}
+.mark{font-size:clamp(82px,24vw,150px);line-height:.63}.mark small{font-size:clamp(18px,5vw,30px);letter-spacing:.28em;margin-top:15px}
+.tagline{font-size:9px;letter-spacing:.2em;line-height:1.9;margin:29px auto 23px}.cta{padding:15px 19px}
+.music{left:15px;right:15px;bottom:15px;width:auto;padding:11px}.cover{width:48px;height:48px}.tracktitle{font-size:9px}
+.location{display:none}.scroll{bottom:103px;font-size:8px}.scroll b{font-size:16px}
+.section{padding:72px 20px}.section h2{font-size:clamp(48px,14vw,90px)}.grid{grid-template-columns:1fr 1fr;gap:9px;margin-top:40px}.card{aspect-ratio:4/5}
+footer{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:12px;padding:28px 18px 35px}.footerSocial{min-width:0;width:100%;padding:12px 9px}.footerCenter{grid-column:1/-1;grid-row:1;order:0}.footerSocial.left{grid-column:1;grid-row:2;order:0}.footerSocial.right{grid-column:2;grid-row:2;order:0}
+.footerCenter small{font-size:8px;text-align:center;line-height:1.6}
+}
+@media(max-width:500px){.grid{grid-template-columns:1fr 1fr}.social{display:none}.logo{font-size:22px}.book{font-size:10px}}
+{.grid{grid-template-columns:1fr}.social{display:none}}
+</style>
+</head>
+<body>
+<div class="site">
+<div class="shell">
+<nav>
+<a class="logo" href="#">VV<span>STYLIST</span></a>
+<div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#work">Services</a><a href="#work">Gallery</a><a href="#booking">Booking</a><a href="#contact">Contact</a></div>
+<div class="navright"><div class="social"><a href="https://www.instagram.com/vvstylist" target="_blank">IG</a><a href="https://www.tiktok.com/@vvstylist" target="_blank">TT</a></div><a class="book" href="https://book.squareup.com/appointments/nk6zyf5qvslsrf/location/LP3MKCSN5MA1X/services" target="_blank" rel="noopener">Book Now ↗</a></div>
+</nav>
+
+<section class="hero" id="home">
+<div class="collage">
+<img src="assets/hero.jpg"><img src="assets/cut-2.jpg"><img src="assets/cut-3.jpg"><img src="assets/cut-4.jpg"><img src="assets/cut-5.jpg">
+</div>
+<div class="heroContent">
+<div class="eyebrow">VANCOUVER · BC · CANADA</div>
+<div class="mark">VV<small>STYLIST</small></div>
+<div class="tagline">IT'S NOT JUST A HAIRCUT.<br>IT'S A LIFESTYLE.</div>
+<a class="cta" href="https://book.squareup.com/appointments/nk6zyf5qvslsrf/location/LP3MKCSN5MA1X/services" target="_blank" rel="noopener">Book Your Spot <span>→</span></a>
+</div>
+<div class="music"><div class="track"><img class="cover" src="assets/cut-3.jpg"><div><div class="tracktitle">VV STYLIST</div></div></div><div class="wave"></div><div id="musicHint" style="font:8px DM Mono,monospace;color:#777;letter-spacing:.1em;margin-top:6px">SOUND · TAP ANYWHERE TO START</div></div>
+<div class="scroll">SCROLL DOWN<b>↓</b></div><div class="location">NORTH VANCOUVER, BC<br>CANADA</div>
+</section>
+
+<section class="section" id="about"><div class="eyebrow">THE WORK</div><h2>SHARP.<br>UNFILTERED.</h2><p>Modern cuts, texture and shape built around your style.</p>
+<div class="grid" id="work">
+<div class="card"><img src="assets/mid-low-blowout-taper.jpg"><span class="label">mid/low blowout taper</span></div>
+<div class="card"><video src="assets/reel-5.mp4" muted autoplay loop playsinline preload="metadata"></video><span class="label">mid taper modern mullet</span></div>
+<div class="card"><img src="assets/cut-5.jpg"><span class="label">mid taper modern mullet</span></div>
+<div class="card"><img src="assets/short-modern-mullet.jpg"><span class="label">Short modern mullet</span></div>
+<div class="card"><video src="assets/reel-6.mp4" muted autoplay loop playsinline preload="metadata"></video><span class="label">Mod cut</span></div>
+<div class="card"><video src="assets/reel.mp4" muted autoplay loop playsinline preload="metadata"></video><span class="label">Short modern</span></div>
+
+</div></section>
+
+<section class="section" id="booking">
+<div class="eyebrow">READY?</div><h2>BOOK<br>YOUR SPOT.</h2><p>Choose your service and time directly through the booking page.</p><br>
+<a class="cta" href="https://book.squareup.com/appointments/nk6zyf5qvslsrf/location/LP3MKCSN5MA1X/services" target="_blank" rel="noopener">Open Booking ↗</a>
+</section>
+
+<footer id="contact">
+  <a class="footerSocial left" href="https://www.instagram.com/vvstylist" target="_blank" rel="noopener">Instagram ↗</a>
+  <div class="footerCenter">
+    <div>© 2026 VV STYLIST</div>
+    <a href="https://maps.app.goo.gl/LsvzyFdzQBgo4AHC8?g_st=ic" target="_blank" rel="noopener">North Vancouver · Location ↗</a>
+    <small>Website Design by Sobhan Faraji · Farajisobhan5@gmail.com</small>
+  </div>
+  <a class="footerSocial right" href="https://www.tiktok.com/@vvstylist" target="_blank" rel="noopener">TikTok ↗</a>
+</footer>
+</div></div>
+
+<audio id="musicAudio" src="assets/music.mp3" loop preload="auto"></audio>
+<script>
+const audio = document.getElementById('musicAudio');
+audio.volume = 0.34;
+
+// Browsers (especially desktop Chrome/Safari) block autoplay with sound.
+// Try immediately, then start on the first natural interaction anywhere on the site.
+async function startMusic(){
+  try{
+    await audio.play();
+    document.documentElement.classList.add('music-playing');
+  }catch(e){}
+}
+startMusic();
+
+['pointerdown','touchstart','keydown','wheel'].forEach(evt => {
+  window.addEventListener(evt, startMusic, {once:true, passive:true});
+});
+
+// Keep the track running after returning to the tab.
+document.addEventListener('visibilitychange', () => {
+  if(!document.hidden) startMusic();
+});
+</script>
+<script>
+audio.addEventListener('playing',()=>{const h=document.getElementById('musicHint');if(h)h.textContent='SOUND · PLAYING';});
+</script>
+</body>
+</html>
